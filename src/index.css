@@ -1,13 +1,76 @@
+:root{
+  --accent-color: #1AB1B7;
+  --custom-black: #202020;
+  --custom-light-grey: rgb(236, 236, 236);
+  --small-rounded-radius: 3px
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Montserrat'
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.bg-custom-black{
+  background-color: var(--custom-black);
+}
+
+.bg-accent{
+  background-color: var(--accent-color);
+}
+
+.border-none{
+  border: none;
+}
+
+.small-rounded-start{
+  border-top-left-radius: var(--small-rounded-radius);
+  border-bottom-left-radius: var(--small-rounded-radius);
+}
+
+.small-rounded-end{
+  border-top-right-radius: var(--small-rounded-radius);
+  border-bottom-right-radius: var(--small-rounded-radius);
+}
+
+.hover-text-accent:hover{
+  color: var(--accent-color) !important;
+}
+
+.text-accent{
+  color: var(--accent-color) !important;
+}
+
+.navbar-toggler{
+  border: none;
+}
+
+
+.navbar-toggler:focus{
+  box-shadow: none !important;
+}
+
+.fw-500{
+  font-weight: 500;
+}
+
+#search-btn{
+  font-size: 11px;
+}
+
+#search-query{
+  font-size: 13px;
+}
+
