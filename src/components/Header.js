@@ -6,7 +6,7 @@ const Header = () => {
     const [query,setQuery] = useState("")
 
     return (
-        <>
+        <header className>
             <div className='container-fluid bg-custom-black'>
                 <div className='container'>
                     <div className='row py-3 '>
@@ -33,7 +33,7 @@ const Header = () => {
             
             
 
-            <nav class=" bg-white shadow-sm">
+            <nav class=" bg-white grey-shadow square-shadow">
                 <div className='container d-flex'>
                     <div class="navbar navbar-expand-sm container-fluid d-flex ">
                         <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,19 +53,17 @@ const Header = () => {
                             <li class="nav-item">
                             <a class="nav-link active hover-text-accent fw-500 ms-1 ms-sm-0" href="#" tabindex="-1" aria-disabled="true">Categories</a>
                             </li>
-                        </ul>
-                            
+                        </ul>  
                         </div>
                     </div>
                     <div className='d-flex align-items-center text-accent'>
-                                <p className='mb-0 mt-0 me-2 text-nowrap'>Contact Us</p>
-                                <i className="fa-regular fa-comment"/>
-                            </div>
-                    </div>
+                        <p className='mb-0 mt-0 me-2 text-nowrap'>Contact Us</p>
+                        <i className="fa-regular fa-comment"/>
+                     </div>
+                </div>
             </nav>
             
-            
-        </>
+        </header>
     )
 }
 
