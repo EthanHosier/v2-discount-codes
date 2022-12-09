@@ -25,6 +25,11 @@ textarea:focus, input:focus{
   outline: none;
 }
 
+header{
+  border-bottom: solid rgba(0,0,0,0.04) 3px;
+}
+
+
 .bg-custom-black{
   background-color: var(--custom-black);
 }
@@ -62,6 +67,13 @@ textarea:focus, input:focus{
   color: var(--accent-color) !important;
 }
 
+.hover-border-accent:hover{
+  border-color: var(--accent-color) !important;
+}
+
+.hover-bg-white:hover{
+  background-color: white;
+}
 
 .text-accent{
   color: var(--accent-color) !important;
@@ -88,6 +100,13 @@ textarea:focus, input:focus{
   color: var(--custom-mid-grey);
 }
 
+.text-custom-black{
+  color: var(--custom-black);
+}
+
+.bg-label-grey{
+  background-color: rgb(235, 235, 235);
+}
 
 .square-shadow{
   box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.03);
@@ -100,7 +119,7 @@ textarea:focus, input:focus{
 
 .vl{
   background-color: var(--custom-light-grey);
-  width: 2px;
+  width: 3px;
   height: 1rem;
 }
 
@@ -116,10 +135,31 @@ textarea:focus, input:focus{
   max-width: 800px;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
 
+.text-overflow-elipses{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
-header{
-  border-bottom: solid rgba(0,0,0,0.04) 3px;
+.coupon-date{
+  width: 175px;
+}
+
+.sale-badge{
+  width: 97px;
+  background-color: #48C78C ;
+}
+
+.link {
+    text-decoration: none;
+}
+
+#coupon-description{
+  font-weight: 400;
 }
 
 #search-btn{

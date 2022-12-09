@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     const queryRef = useRef()
@@ -42,16 +42,16 @@ const Header = () => {
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb ">
                             <li class="nav-item">
-                            <a class="nav-link text-accent font-weight fw-500 me-1 me-sm-0" aria-current="page" href="#">Home</a>
+                            <Link style={{textDecoration: "none"}} to="/"><span class="nav-link text-accent font-weight fw-500 me-1 me-sm-0">Home</span></Link>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link active hover-text-accent fw-500 mx-1 mx-sm-0" href="#">Browse Coupons</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                            <a class="nav-link active hover-text-accent fw-500 mx-1 mx-sm-0" href="#">Stores</a>
+                            <Link style={{textDecoration: "none"}} to="/coupons"><span class="nav-link active hover-text-accent font-weight fw-500 me-1 me-sm-0">Coupons</span></Link>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link active hover-text-accent fw-500 ms-1 ms-sm-0" href="#" tabindex="-1" aria-disabled="true">Categories</a>
+                            <Link style={{textDecoration: "none"}} to="/brands"><span class="nav-link active hover-text-accent font-weight fw-500 me-1 me-sm-0">Brands</span></Link>
+                            </li>
+                            <li class="nav-item">
+                            <Link style={{textDecoration: "none"}} to="/categories"><span class="nav-link active hover-text-accent font-weight fw-500 me-1 me-sm-0">Categories</span></Link>
                             </li>
                         </ul>  
                         </div>

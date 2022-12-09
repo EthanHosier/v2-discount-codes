@@ -1,29 +1,57 @@
-import React from 'react'
 import Slider from "react-slick";
+import { useState, useEffect } from "react";
 
-const SlickCarousel = () => {
+const SlickCarousel = ({slides,isResponsive, slidesToShow, arrows}) => {
   
+  const [slider,setSlider] = useState();
+
+    useEffect(()=>{
+        if(!slider) return
+        slider.slickPlay();
+    }, [slider])
+
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows:false,
-        //dots: false,
+        //autoplay: true,
+        autoplaySpeed: 5000,
+        slidesToShow: slidesToShow,
+        slidesToScroll: slidesToShow,
+        arrows: false,
+        responsive: isResponsive && [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       };
+
+      
   
       return (
-        <div className='mb-5 square-shadow' >
-          <Slider {...settings}>
-            <div className='bg-light h-100 ar-1p5'>
-              <h3>1</h3>
-            </div>
-            <div className='bg-secondary ar-1p5'>
-              <h3>2</h3>
-            </div>
-            
-          </Slider>
+        <div className={`${slidesToShow == 1? "mb-5 square-shadow" : ""}`} >
+            <Slider ref={s => setSlider(s)} {...settings}>
+              {slides}
+            </Slider>
         </div>
       );
 }
