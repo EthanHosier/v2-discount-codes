@@ -116,7 +116,7 @@ const Homepage = () => {
               <p className='me-4 mb-0'><strong>All Stores </strong><i class="fa-solid fa-arrow-right"/></p>
             </div>
             <div className='p-4'>
-              <SlickCarousel arrows isResponsive slidesToShow={5} slides={
+              <SlickCarousel arrows isResponsive slidesToShow={5} swipeToSlide slides={
                 [
                   <div className='p-4'>
                     <h6>1</h6>

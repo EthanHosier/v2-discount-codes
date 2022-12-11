@@ -6,7 +6,7 @@ const Header = () => {
     const [query,setQuery] = useState("")
 
     return (
-        <header className>
+        <>
             <div className='container-fluid bg-custom-black'>
                 <div className='container'>
                     <div className='row py-3 '>
@@ -33,7 +33,7 @@ const Header = () => {
             
             
 
-            <nav class=" bg-white grey-shadow square-shadow">
+            <nav class=" bg-white">
                 <div className='container d-flex'>
                     <div class="navbar navbar-expand-sm container-fluid d-flex ">
                         <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,7 +63,7 @@ const Header = () => {
                 </div>
             </nav>
             
-        </header>
+        </>
     )
 }
 

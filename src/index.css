@@ -75,6 +75,10 @@ header{
   background-color: white;
 }
 
+.hover-bg-accent:hover{
+  background-color: var(--accent-color) !important;
+}
+
 .text-accent{
   color: var(--accent-color) !important;
 }
@@ -99,6 +103,12 @@ header{
 .text-mid-grey{
   color: var(--custom-mid-grey);
 }
+
+.border-mid-grey{
+  border-color: var(--custom-light-grey) !important;
+}
+
+
 
 .text-custom-black{
   color: var(--custom-black);
@@ -158,9 +168,22 @@ header{
     text-decoration: none;
 }
 
+.w-150{
+  width: 150px;
+}
+
+.font-15{
+  font-size: 3rem;
+}
+
+.mw-1000{
+  max-width: 1000px;
+}
+
 #coupon-description{
   font-weight: 400;
 }
+
 
 #search-btn{
   font-size: 11px;

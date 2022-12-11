@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import { useState, useEffect } from "react";
 
-const SlickCarousel = ({slides,isResponsive, slidesToShow, arrows}) => {
+const SlickCarousel = ({slides,isResponsive, slidesToShow, arrows, swipeToSlide}) => {
   
   const [slider,setSlider] = useState();
 
@@ -12,12 +12,13 @@ const SlickCarousel = ({slides,isResponsive, slidesToShow, arrows}) => {
 
     const settings = {
         dots: false,
-        infinite: true,
+        infinite: !swipeToSlide,
         speed: 500,
-        //autoplay: true,
+        //autoplay: !swipeToSlide,
         autoplaySpeed: 5000,
         slidesToShow: slidesToShow,
-        slidesToScroll: slidesToShow,
+        slidesToScroll: swipeToSlide? 1:slidesToShow,
+        swipeToSlide: swipeToSlide,
         arrows: false,
         responsive: isResponsive && [
           {
