@@ -1,19 +1,25 @@
 import React, {useState} from 'react'
+import { useSearchParams, Outlet} from 'react-router-dom';
 import BaseCoupon from './BaseCoupon'
 
 const NUM_OF_PAGES = 3;
 const CouponsPage = () => {
   const [selectedPage, setSelectedPage] = useState(1);
+  const [searchParams, setSearchParams] = useSearchParams();
 
   return (
+
     <div className='container-fluid bg-light-grey'>
       <div className='container pt-5'>
+        <Outlet/>
         <div className='row mt-5'>
           <div className='col-xs-12 col-lg-4 order-lg-first order-last'>
             
-            <div className='bg-white square-shadow pt-2'>
-              <h6 className='border-bottom p-3'><strong>How to <span className='text-accent'>Save</span> With Website.com</strong></h6>
-              <p className='p-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!</p>
+            <div className='pt-2'>
+              <h6 className='text-secondary'><strong>How to <span className='text-accent'>Save</span> With Website.com</strong></h6>
+              <p className='text-secondary'>
+              To use a discount code or voucher from [WEBSITE NAME], simply search for the category of item or brand you wish to purchase from. Once you have found the discount or voucher you want to use, either follow the link to the voucher or copy the code and enter it at checkout when you are making your purchase. This will automatically apply the discount to your total, allowing you to save money on your purchase. Make sure to keep coming back to [WEBSITE NAME] as we are constantly adding new discount codes and offers. Overall, using [WEBSITE NAME] is a simple and effective way to save money on your purchases.
+              </p>
             </div>
 
             <div className='bg-white square-shadow pt-2 mt-5' >
@@ -41,12 +47,15 @@ const CouponsPage = () => {
             </div>
           </div>
           <div className='col-xs-12 col-lg-8'>
+          {searchParams?.get("q") && <h2 className='mb-3'>Search Results for "{searchParams.get("q")}"</h2>}
+
             <div className='square-shadow bg-white d-flex justify-content-between align-items-center px-4 py-4'>
               <h6 className='mb-0'>Found 18 Coupons</h6>
-              <select class=" border-mid-grey bg-white w-150 p-2 ms-1" aria-label="Default select example">
-                <option selected>Ending Soon</option>
-                <option value="1">Date Added</option>
-                <option value="2">Name</option>
+              <select class=" border-mid-grey bg-white w-150 p-2 ms-1">
+                <option selected>Popular</option>
+                <option value="1">Ending Soon</option>
+                <option value="2">Latest</option>
+                <option value="3">Name</option>
               </select>
             </div>
 

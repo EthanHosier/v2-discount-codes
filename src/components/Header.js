@@ -1,9 +1,17 @@
 import React, { useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
+
 
 const Header = () => {
     const queryRef = useRef()
     const [query,setQuery] = useState("")
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const onSearch = () =>{
+        navigate(`/coupons?q=${query}`)
+        setQuery("")
+    }
 
     return (
         <>
@@ -24,7 +32,7 @@ const Header = () => {
                                 value={query}
                                 placeholder="I want coupons for..."
                                 />
-                            <button className='bg-accent text-white border-none h-100 small-rounded-end' id="search-btn">SEARCH</button>
+                            <button className='bg-accent text-white border-none h-100 small-rounded-end' id="search-btn" disabled={!query} onClick={onSearch}>SEARCH</button>
 
                         </div>
                     </div>
@@ -42,16 +50,16 @@ const Header = () => {
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb ">
                             <li class="nav-item">
-                            <Link style={{textDecoration: "none"}} to="/"><span class="nav-link text-accent font-weight fw-500 me-1 me-sm-0">Home</span></Link>
+                            <Link style={{textDecoration: "none"}} to="/"><span class={`nav-link font-weight fw-500 me-1 me-sm-0 ${location.pathname == "/" ? "text-accent" : "active"}`}>Home</span></Link>
                             </li>
                             <li class="nav-item">
-                            <Link style={{textDecoration: "none"}} to="/coupons"><span class="nav-link active hover-text-accent font-weight fw-500 me-1 me-sm-0">Coupons</span></Link>
+                            <Link style={{textDecoration: "none"}} to="/coupons"><span class={`nav-link hover-text-accent font-weight fw-500 me-1 me-sm-0 ${location.pathname == "/coupons" ? "text-accent" : "active"}`}>Coupons</span></Link>
                             </li>
                             <li class="nav-item">
-                            <Link style={{textDecoration: "none"}} to="/brands"><span class="nav-link active hover-text-accent font-weight fw-500 me-1 me-sm-0">Brands</span></Link>
+                            <Link style={{textDecoration: "none"}} to="/brands"><span class={`nav-link hover-text-accent font-weight fw-500 me-1 me-sm-0 ${location.pathname == "/brands" ? "text-accent" : "active"}`}>Brands</span></Link>
                             </li>
                             <li class="nav-item">
-                            <Link style={{textDecoration: "none"}} to="/categories"><span class="nav-link active hover-text-accent font-weight fw-500 me-1 me-sm-0">Categories</span></Link>
+                            <Link style={{textDecoration: "none"}} to="/categories"><span class={`nav-link hover-text-accent font-weight fw-500 me-1 me-sm-0 ${location.pathname == "/categories" ? "text-accent" : "active"}`}>Categories</span></Link>
                             </li>
                         </ul>  
                         </div>

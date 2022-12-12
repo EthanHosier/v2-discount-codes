@@ -8,10 +8,8 @@ const LOCATION_PAGES = ["categories", "brands"] //pages where should show locati
 const Layout = () => {
 
   const location = useLocation();
-  useEffect(()=>{
-    console.log(location.pathname.slice(1))
-  }, [location])
   
+
   return (
     <div>
         <header className='square-shadow'>

@@ -1,14 +1,18 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const BaseCoupon = () => {
-  return (
+    const navigate = useNavigate();
+    return (
     <div className='my-3 container bg-white square-shadow p-4'>
         <div className='d-lg-none d-flex justify-content-end'>
             <p className='text-custom-black bg-label-grey text-center coupon-date small-rounded'> <i class="fa-regular fa-calendar"/> January 19, 2004</p>
         </div>
         <div className='row d-flex justify-content-center align-items-center'>
-            <div className='col-lg-3 p-5 border cursor-pointer mb-sm-3 mb-lg-0 text-center d-none d-lg-block hover-border-accent'>LOGO</div>
-            <div className='col-lg-3 p-5 border-bottom cursor-pointer mb-sm-3 mb-lg-0 text-center d-xs-block d-lg-none hover-border-accent'>LOGO</div>
+            
+                <div className='col-lg-3 p-5 border cursor-pointer mb-sm-3 mb-lg-0 text-center d-none d-lg-block hover-border-accent' onClick={() => navigate("/brand1")}>LOGO</div>
+                <div className='col-lg-3 p-5 border-bottom cursor-pointer mb-sm-3 mb-lg-0 text-center d-xs-block d-lg-none hover-border-accent' onClick={() => navigate("/brand1")}>LOGO</div>
+            
 
             <div className='col-lg-6 d-flex flex-column justify-content-center overflow-hidden mb-sm-3 mb-lg-0 '>
                 <h5 className='text-overflow-elipses hover-text-accent cursor-pointer mb-sm-4'>Title Eget Lorem 10% Dolor Sed Viverra Ipsum Nunc Aliquet</h5>
@@ -16,7 +20,7 @@ const BaseCoupon = () => {
             </div>
             
             <div className='col-lg-3 d-flex flex-column align-items-end'>
-                <p className='text-mid-grey text-center d-none d-lg-block coupon-date'> <i class="fa-regular fa-calendar"/> January 19, 2004</p>
+                <p className='text-mid-grey text-center d-none d-lg-block coupon-date'> <i className="fa-regular fa-calendar"/> January 19, 2004</p>
                 <button className='p-3 btn btn-warning w-100'>Get Code</button>
             </div>
         </div>
