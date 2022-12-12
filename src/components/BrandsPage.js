@@ -1,8 +1,18 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const BrandsPage = () => {
   const navigate = useNavigate();
+
+  //scroll to top when page renders
+  useEffect(() => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant',
+      });
+  }, [])
+
   return (
     <div className='container-fluid bg-light-grey py-4'>
         <div className='container d-flex flex-wrap justify-content-center py-5 mw-1000'>

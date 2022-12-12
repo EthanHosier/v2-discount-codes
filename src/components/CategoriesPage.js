@@ -1,4 +1,4 @@
-import React, {useState } from 'react'
+import React, {useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import useGlobal from '../hooks/useGlobal'
 
@@ -6,6 +6,15 @@ const CategoriesPage = () => {
   const [buttonHovered, setButtonHovered] = useState(-1)
   const navigate = useNavigate()
   const global = useGlobal()
+
+  //scroll to top when page renders
+  useEffect(() => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant',
+      });
+  }, [])
 
   return (
     <>

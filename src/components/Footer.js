@@ -25,7 +25,8 @@ const Footer = () => {
 
                     </div>
                     <div className='col d-flex justify-content-center'>
-                        <Link style={{textDecoration: "none"}} to="/terms&conditions"><p className='text-mid-grey ms-2 text-nowrap mb-0'>Terms & Conditions</p></Link>
+                        <Link style={{textDecoration: "none"}} to="/terms&conditions"><p className='text-mid-grey me-2 text-nowrap mb-0'>Terms & Conditions</p></Link>
+                        <Link style={{textDecoration: "none"}} to="/privacy-policy"><p className='text-mid-grey ms-2 text-nowrap mb-0'>Privacy Policy</p></Link>
                     </div>
                 </div>
             </div>

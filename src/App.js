@@ -9,6 +9,7 @@ import CategoryTitle from './components/CategoryTitle';
 import useGlobal from './hooks/useGlobal'
 import ContactUs from './components/ContactUs';
 import TermsAndConditionsPage from './components/TermsAndConditionsPage';
+import PrivacyPolicy from './components/PrivacyPolicy';
 
 const App = () => {
   const global = useGlobal();
@@ -29,7 +30,8 @@ const App = () => {
           
         <Route path='/brand1' element = {<SpecificBrandPage brand={"[BRAND]"}/>}/>
         <Route path='/contact-us' element = {<ContactUs/>}/>
-        <Route path='terms&conditions' element={<TermsAndConditionsPage/>}/>
+        <Route path='/terms&conditions' element={<TermsAndConditionsPage/>}/>
+        <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
       </Route>
     </Routes>
   );

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { useSearchParams, Outlet} from 'react-router-dom';
 import BaseCoupon from './BaseCoupon'
 
@@ -6,6 +6,15 @@ const NUM_OF_PAGES = 3;
 const CouponsPage = () => {
   const [selectedPage, setSelectedPage] = useState(1);
   const [searchParams, setSearchParams] = useSearchParams();
+  
+  //scroll to top when page renders
+  useEffect(() => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant',
+      });
+  }, [])
 
   return (
 

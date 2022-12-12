@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import useGlobal from '../hooks/useGlobal'
 import BaseCoupon from './BaseCoupon'
@@ -11,6 +11,15 @@ const Homepage = () => {
   const [selectedBtn, setSelectedBtn] = useState(0)
   const navigate = useNavigate();
   const global = useGlobal();
+
+  //scroll to top when page renders
+  useEffect(() => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant',
+      });
+  }, [])
 
   return (
     <div className='container-fluid bg-light-grey py-5'>
