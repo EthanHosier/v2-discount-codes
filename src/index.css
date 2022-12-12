@@ -181,6 +181,16 @@ header{
   max-width: 1000px;
 }
 
+.bg-stripes{
+  background: repeating-linear-gradient(
+    45deg,
+    #f5f4f4,
+    #f5f4f4 3px,
+    #ffffff 3px,
+    #ffffff 6px
+  );
+}
+
 
 
 #coupon-description{

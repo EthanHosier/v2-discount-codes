@@ -7,6 +7,8 @@ import BrandsPage from './components/BrandsPage';
 import SpecificBrandPage from './components/SpecificBrandPage';
 import CategoryTitle from './components/CategoryTitle';
 import useGlobal from './hooks/useGlobal'
+import ContactUs from './components/ContactUs';
+import TermsAndConditionsPage from './components/TermsAndConditionsPage';
 
 const App = () => {
   const global = useGlobal();
@@ -18,7 +20,7 @@ const App = () => {
         <Route path='/brands' element={<BrandsPage/>}/>
 
         <Route path='/coupons' element={<CouponsPage searchQuery="dog"/>}>
-          
+
           {global.categories.map((e,i) => {
             return <Route path={e.name.toLowerCase()} element={<CategoryTitle category={e}/>}/>
                 
@@ -26,6 +28,8 @@ const App = () => {
         </Route>
           
         <Route path='/brand1' element = {<SpecificBrandPage brand={"[BRAND]"}/>}/>
+        <Route path='/contact-us' element = {<ContactUs/>}/>
+        <Route path='terms&conditions' element={<TermsAndConditionsPage/>}/>
       </Route>
     </Routes>
   );

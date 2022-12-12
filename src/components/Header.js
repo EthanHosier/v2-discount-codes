@@ -64,9 +64,8 @@ const Header = () => {
                         </ul>  
                         </div>
                     </div>
-                    <div className='d-flex align-items-center text-accent'>
-                        <p className='mb-0 mt-0 me-2 text-nowrap'>Contact Us</p>
-                        <i className="fa-regular fa-comment"/>
+                    <div className='d-flex align-items-center'>
+                        <Link style={{textDecoration: "none"}} to="/contact-us"><p className='mb-0 mt-0 me-2 text-nowrap text-accent'>Contact Us <i className="fa-regular fa-comment text-accebt"/></p></Link>
                      </div>
                 </div>
             </nav>
