@@ -12,7 +12,7 @@ const Layout = () => {
   
 
   return (
-    <div>
+    <div className='vh-100'>
         <header className='square-shadow'>
           <Header/>
           {LOCATION_PAGES.includes(location.pathname.slice(1)) && <Location location={location.pathname.slice(1)}/>}

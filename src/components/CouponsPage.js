@@ -25,9 +25,9 @@ const CouponsPage = () => {
           <div className='col-xs-12 col-lg-4 order-lg-first order-last'>
             
             <div className='pt-2'>
-              <h6 className='text-secondary'><strong>How to <span className='text-accent'>Save</span> With Website.com</strong></h6>
+              <h6 className='text-secondary'><strong>How to <span className='text-accent'>Save</span> With VoucherFrog.com</strong></h6>
               <p className='text-secondary'>
-              To use a discount code or voucher from [WEBSITE NAME], simply search for the category of item or brand you wish to purchase from. Once you have found the discount or voucher you want to use, either follow the link to the voucher or copy the code and enter it at checkout when you are making your purchase. This will automatically apply the discount to your total, allowing you to save money on your purchase. Make sure to keep coming back to [WEBSITE NAME] as we are constantly adding new discount codes and offers. Overall, using [WEBSITE NAME] is a simple and effective way to save money on your purchases.
+              To use a discount code or voucher from Voucher Frog, simply search for the category of item or brand you wish to purchase from. Once you have found the discount or voucher you want to use, either follow the link to the voucher or copy the code and enter it at checkout when you are making your purchase. This will automatically apply the discount to your total, allowing you to save money on your purchase. Make sure to keep coming back to Voucher Frog as we are constantly adding new discount codes and offers. Overall, using Voucher Frog is a simple and effective way to save money on your purchases.
               </p>
             </div>
 

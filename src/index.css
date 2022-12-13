@@ -30,6 +30,10 @@ header{
   border-bottom: solid rgba(0,0,0,0.04) 3px;
 }
 
+.text-helvetica{
+  font-family: Helvetica, 'Montserrat'
+  sans-serif;
+}
 
 .bg-custom-black{
   background-color: var(--custom-black);
@@ -191,7 +195,18 @@ header{
   );
 }
 
+.w-fc{
+  width: fit-content;
+}
 
+
+#frog-logo-header{
+  width: 100px;
+}
+
+#frog-logo-footer{
+  width: 150px;
+}
 
 #coupon-description{
   font-weight: 400;

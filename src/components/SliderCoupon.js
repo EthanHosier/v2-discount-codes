@@ -11,7 +11,7 @@ const SliderCoupon = () => {
                 
                 <div className='d-flex flex-wrap justify-content-between'>
                     <div className='text-mid-grey text-center coupon-date '> <i class="fa-solid fa-tags"/> Shop Name</div>
-                    <div className='text-mid-grey text-center coupon-date'> <i class="fa-solid fa-clock"/> January 19, 2004</div>
+                    <div className='text-mid-grey text-center coupon-date'> <i class="fa-solid fa-clock"/> January 19, 2023</div>
                 </div>
             </div>
             <div className='d-flex justify-content-center align-items-center col-xs-12 col-sm-2'>

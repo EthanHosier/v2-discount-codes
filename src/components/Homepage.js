@@ -5,7 +5,6 @@ import BaseCoupon from './BaseCoupon'
 import SlickCarousel from './SlickCarousel'
 import SliderCoupon from './SliderCoupon'
 
-
 const Homepage = () => {
   
   const [selectedBtn, setSelectedBtn] = useState(0)

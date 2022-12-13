@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
+import frogLogo from '../rsc/imageedit_8_9571773753.png'
 
 
 const Header = () => {
@@ -18,11 +19,17 @@ const Header = () => {
             <div className='container-fluid bg-custom-black'>
                 <div className='container'>
                     <div className='row py-3 '>
-                        <div className='col d-flex py-2'>
-                            <img src='https://demo.spoonthemes.net/themes/couponis/wp-content/uploads/2017/09/logo.png'/>
+                        <div className='col'>
+                            <Link style={{textDecoration: "none", width: "fit-content"}} to="/">
+                                <div className='d-flex justify-content-center justify-content-lg-start'>
+                                    <img src={frogLogo} id="frog-logo-header"/>
+                                    <div className='m-0 d-flex align-items-center text-nowrap'>
+                                        <h3 className='mb-0 text-accent text-helvetica'>Voucher <span className='text-warning'>Frog</span></h3>
+                                    </div>
+                                </div>
+                            </Link>
                         </div>
-                        
-                        <div className='d-flex justify-content-end rounded col py-2'>
+                        <div className='d-flex justify-content-center justify-content-lg-end rounded col py-2'>
                             <input className='h-100 border-none p-2 small-rounded-start' 
                                 type="text"
                                 id="search-query"
@@ -64,7 +71,7 @@ const Header = () => {
                         </ul>  
                         </div>
                     </div>
-                    <div className='d-flex align-items-center'>
+                    <div className='d-flex align-items-start pt-3'>
                         <Link style={{textDecoration: "none"}} to="/contact-us"><p className='mb-0 mt-0 me-2 text-nowrap text-accent'>Contact Us <i className="fa-regular fa-comment text-accebt"/></p></Link>
                      </div>
                 </div>

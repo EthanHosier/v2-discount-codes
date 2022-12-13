@@ -12,10 +12,10 @@ const SlickCarousel = ({slides,isResponsive, slidesToShow, arrows, swipeToSlide}
 
     const settings = {
         dots: false,
-        infinite: !swipeToSlide,
+        infinite: true,
         speed: 500,
-        //autoplay: !swipeToSlide,
-        autoplaySpeed: 5000,
+        autoplay: true,
+        autoplaySpeed: swipeToSlide? 2000: 5000,
         slidesToShow: slidesToShow,
         slidesToScroll: swipeToSlide? 1:slidesToShow,
         swipeToSlide: swipeToSlide,

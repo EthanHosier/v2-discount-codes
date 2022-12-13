@@ -20,7 +20,7 @@ const BaseCoupon = () => {
             </div>
             
             <div className='col-lg-3 d-flex flex-column align-items-end'>
-                <p className='text-mid-grey text-center d-none d-lg-block coupon-date'> <i className="fa-regular fa-calendar"/> January 19, 2004</p>
+                <p className='text-mid-grey text-center d-none d-lg-block coupon-date'> <i className="fa-regular fa-calendar"/> January 19, 2023</p>
                 <button className='p-3 btn btn-warning w-100'>Get Code</button>
             </div>
         </div>
